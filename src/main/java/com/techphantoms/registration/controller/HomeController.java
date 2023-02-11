@@ -1,4 +1,4 @@
-package com.techphantoms.persreg.controller;
+package com.techphantoms.registration.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
