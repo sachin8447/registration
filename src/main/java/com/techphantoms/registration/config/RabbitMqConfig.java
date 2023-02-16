@@ -1,4 +1,4 @@
-package com.techphantoms.persreg.config;
+package com.techphantoms.registration.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -9,7 +9,7 @@ import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class RabbitMqConfig {
     private static final String topicExchangeName = "topicExchangeName";
     private static final String queueName = "queueName";

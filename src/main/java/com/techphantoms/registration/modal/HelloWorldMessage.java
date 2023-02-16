@@ -1,4 +1,4 @@
-package com.techphantoms.persreg.modal;
+package com.techphantoms.registration.modal;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
