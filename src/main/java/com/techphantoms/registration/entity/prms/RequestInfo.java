@@ -1,12 +1,15 @@
 package com.techphantoms.registration.entity.prms;
 
+import org.hibernate.annotations.Type;
+import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.*;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.sql.Timestamp;
-import java.util.Objects;
+import java.time.LocalDateTime;
 
 
 @Data
@@ -17,26 +20,32 @@ import java.util.Objects;
 @Setter
 @Entity
 @Table(name = "request_info", schema = "prms")
+@DynamicInsert
+@TypeDef(
+        name = "jsonb",
+        typeClass = JsonBinaryType.class
+)
 public class RequestInfo {
     private long requestInfoId;
     @Id
     private String requestInfoGuid;
     private String applicationNumber;
     private String dataXml;
-    private Object dataJson;
+    @Type(type = "jsonb")
+    private String dataJson;
     private String formContentUri;
-    private Timestamp submittedDate;
+    private LocalDateTime submittedDate;
     private String citizenGuid;
     private String submittedByGuid;
     private Boolean isActive;
     private String createdBy;
-    private Timestamp createdDate;
+    private LocalDateTime createdDate;
     private String createdIpAddr;
     private String createdMacAddr;
     private String creatorRemarks;
     private String createdUri;
     private String modifiedBy;
-    private Timestamp modifiedDate;
+    private LocalDateTime modifiedDate;
     private String modifiedIpAddr;
     private String modifiedMacAddr;
     private String modifierRemarks;

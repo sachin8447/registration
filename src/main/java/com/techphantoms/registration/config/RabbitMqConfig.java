@@ -1,5 +1,5 @@
 package com.techphantoms.registration.config;
-
+/*
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
@@ -7,7 +7,7 @@ import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Configuration;*/
 
 //@Configuration
 public class RabbitMqConfig {
@@ -15,7 +15,7 @@ public class RabbitMqConfig {
     private static final String queueName = "queueName";
     private static final String messageRoutingKey = "messageRoutingKey";
 
-    @Bean
+    /*@Bean
     Queue queue(){
         return new Queue(queueName,false);
     }
@@ -38,5 +38,5 @@ public class RabbitMqConfig {
         connectionFactory.setPassword("guest");
         return connectionFactory;
 
-    }
+    }*/
 }

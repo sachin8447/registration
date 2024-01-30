@@ -1,12 +1,12 @@
 package com.techphantoms.registration.entity.prms;
 
 import lombok.*;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.sql.Timestamp;
-import java.util.Objects;
+import java.time.LocalDateTime;
 
 
 @Data
@@ -24,16 +24,17 @@ public class RequestPrcsStatus {
     private Boolean isStatusActive;
     private String docsDetailInfo;
     private String dataXml;
-    private Object dataJson;
-    private Timestamp statusAsOnDate;
+    @Type(type = "jsonb")
+    private String dataJson;
+    private LocalDateTime statusAsOnDate;
     private String createdBy;
-    private Timestamp createdDate;
+    private LocalDateTime createdDate;
     private String createdIpAddr;
     private String createdMacAddr;
     private String creatorRemarks;
     private String createdUri;
     private String modifiedBy;
-    private Timestamp modifiedDate;
+    private LocalDateTime modifiedDate;
     private String modifiedIpAddr;
     private String modifiedMacAddr;
     private String modifierRemarks;

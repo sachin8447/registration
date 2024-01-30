@@ -1,6 +1,7 @@
 package com.techphantoms.registration.entity.prms;
 
 import lombok.*;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -21,7 +22,8 @@ public class RequestDetail {
     private String requestDetailGuid;
     private String fileNumber;
     private String dataXml;
-    private Object dataJson;
+    @Type(type = "jsonb")
+    private String dataJson;
     private String formContentUri;
     private LocalDateTime submittedDate;
     private Boolean isSubmitted;

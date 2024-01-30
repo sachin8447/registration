@@ -1,7 +1,7 @@
 package com.techphantoms.registration;
 
 import com.techphantoms.registration.modal.HelloWorldMessage;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
+//import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
